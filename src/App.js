@@ -1,16 +1,9 @@
 import React from "react";
-import {connect} from "react-redux";
 
-
-function App() {
-
-  
-
+export default function App() {
   return (
-    <div className="App">
-      GO GO GO
+    <div>
+      GOGOGO 
     </div>
   );
 }
-
-export default App;
