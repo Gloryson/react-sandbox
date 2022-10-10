@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { Context } from "../App";
+import { Context } from "./Provider";
 
 export default function Infirst () {
 
-  const [gg, setgg] = useContext(Context);
+  const [gg2, setgg2] = useContext(Context);
 
   return (
-    <input value={gg} onChange={event => setgg(event.target.value)}></input>
+    <input value={gg2} onChange={setgg2(gg2 + 2)}></input>
   )
 }

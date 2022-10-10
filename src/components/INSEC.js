@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { Context } from "../App";
+import { Context } from "./Provider";
 
 export default function INSEC () {
 
-  const [gg, setgg] = useContext(Context);
+  const [gg2] = useContext(Context);
 
   return (
-    <p>{gg}</p>
+    <p>{gg2}</p>
   )
 }

@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import First from "./components/First";
+import ALL from "./components/Provider";
 import Sec from "./components/Sec";
 
-export const Context = React.createContext();
+
+
 
 export default function App() {
 
-  
-
-  const [gg, setgg] = useState(0);
 
   return (
-    <Context.Provider value={[gg, setgg]}>
+    <ALL>
       <First/>
       <Sec/>
-    </Context.Provider>
+    </ALL>
   );
 }
