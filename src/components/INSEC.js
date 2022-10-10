@@ -3,9 +3,9 @@ import { Context } from "./Provider";
 
 export default function INSEC () {
 
-  const [gg2] = useContext(Context);
+  const {gg} = useContext(Context);
 
   return (
-    <p>{gg2}</p>
+    <p>{gg}</p>
   )
 }
