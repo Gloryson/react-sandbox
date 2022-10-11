@@ -12,7 +12,7 @@ export default function AppProvider( { children } ) {
   })
 
   return (
-    <Context.Provider value={{state, dispatch}}>
+    <Context.Provider value={ { state, dispatch } }>
       {children}
     </Context.Provider>
   )
