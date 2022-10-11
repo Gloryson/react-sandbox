@@ -4,7 +4,7 @@ import AppProvider from "./store/AppProvider";
 
 
 
-export default function App() {
+export default function App () {
 
 
   return (
