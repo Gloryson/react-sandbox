@@ -1,14 +1,14 @@
-import React, { createContext, useReducer } from "react";
+import React, { useReducer } from "react";
 import { reducer } from "./reducer";
 
 
-const Context = createContext();
+export const Context = React.createContext();
 
 
 export default function AppProvider({children}) {
 
   const [state, dispatch] = useReducer(reducer, {
-
+    notesArray: [], inputValue: ``, isEdit: false, visible: false
   })
 
   return (
