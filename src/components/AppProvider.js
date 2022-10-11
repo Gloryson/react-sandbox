@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
+import { reducer } from "./reducer";
 
 
 
@@ -8,15 +9,11 @@ export const Context = React.createContext();
 
 export default function AppProvider ( {children} ) {
 
-
-  const [buttonName, setButtonName] = useState(`button1`);
-  const [button2Name, setButton2Name] = useState(`button2`);
-  const [inputValue, setInputValue] = useState(``);
-  const [input2Value, setInput2Value] = useState(``);
-
+  const [state, dispatch] = useReducer(reducer, {buttonName: `button`,
+  inputValue: ``, text: ``})
 
   return (
-    <Context.Provider value={{buttonName, button2Name, inputValue, input2Value, setButtonName, setButton2Name, setInputValue, setInput2Value}}>
+    <Context.Provider value={{dispatch, state}}>
       {children}
     </Context.Provider>
   )

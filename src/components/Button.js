@@ -3,9 +3,9 @@ import { Context } from "./AppProvider";
 
 export default function Button () {
 
-  const {buttonName, setInputValue, setButtonName} = useContext(Context);
+  const {state, dispatch} = useContext(Context);
 
   return (
-    <button onClick={() => {setButtonName(`button1`); setInputValue(`button1`)}}>{buttonName}</button>
+    <button onClick={() => dispatch({type: `clickButton`})}>{state.buttonName}</button>
   )
 }

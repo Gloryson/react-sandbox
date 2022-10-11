@@ -3,9 +3,9 @@ import { Context } from "./AppProvider";
 
 export default function Input () {
 
-  const {inputValue, setInputValue, setButton2Name} = useContext(Context);
+  const {state, dispatch} = useContext(Context);
 
   return (
-    <input value={inputValue} onChange={event => {setButton2Name(event.target.value); setInputValue(event.target.value)}}></input>
+    <input value={state.inputValue} onChange={event => dispatch({type: 'onChange', text: event.target.value})}></input>
   )
 }
