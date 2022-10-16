@@ -10,7 +10,7 @@ export const Context = createContext();
 export default function AppProvider ({children}) {
 
   const [state, dispatch] = useReducer(MainReducer, {
-    gg:``
+    array: []
   })
 
   return (
