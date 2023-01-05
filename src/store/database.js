@@ -1,1 +1,1 @@
-export const database = [1];
+export const database = [1,2];
